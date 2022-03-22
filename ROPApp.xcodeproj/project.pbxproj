@@ -21,8 +21,8 @@
 		BF9D591427E93090007B409C /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D591327E93090007B409C /* InformationView.swift */; };
 		BF9D591627E930B0007B409C /* SendDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D591527E930B0007B409C /* SendDataView.swift */; };
 		BF9D591827E94EA1007B409C /* ClsssificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D591727E94EA1007B409C /* ClsssificationView.swift */; };
-		BF9D591B27EA24BD007B409C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF9D591A27EA24BD007B409C /* GoogleService-Info.plist */; };
 		BF9D591E27EA2593007B409C /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = BF9D591D27EA2593007B409C /* FirebaseAppDistribution-Beta */; };
+		BF9D592027EA2B68007B409C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF9D591F27EA2B68007B409C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,7 @@
 		BF9D591527E930B0007B409C /* SendDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataView.swift; sourceTree = "<group>"; };
 		BF9D591727E94EA1007B409C /* ClsssificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClsssificationView.swift; sourceTree = "<group>"; };
 		BF9D591927E988F7007B409C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		BF9D591A27EA24BD007B409C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF9D591F27EA2B68007B409C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 				BF9D590E27E92FBC007B409C /* Pages */,
 				BF9D590327E92E38007B409C /* Extension */,
 				BF9D58F927E92D8F007B409C /* Assets.xcassets */,
-				BF9D591A27EA24BD007B409C /* GoogleService-Info.plist */,
+				BF9D591F27EA2B68007B409C /* GoogleService-Info.plist */,
 				BF9D58FB27E92D8F007B409C /* Preview Content */,
 			);
 			path = ROPApp;
@@ -186,7 +186,7 @@
 			files = (
 				BF9D58FD27E92D8F007B409C /* Preview Assets.xcassets in Resources */,
 				BF9D58FA27E92D8F007B409C /* Assets.xcassets in Resources */,
-				BF9D591B27EA24BD007B409C /* GoogleService-Info.plist in Resources */,
+				BF9D592027EA2B68007B409C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

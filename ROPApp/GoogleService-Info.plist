@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>989119751579-kb1kvhncoqh194pe9f5hgsduuodnjgrp.apps.googleusercontent.com</string>
+	<string>989119751579-oju5t823q3kr6d18k9knlk5gknpp4n5v.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.989119751579-kb1kvhncoqh194pe9f5hgsduuodnjgrp</string>
+	<string>com.googleusercontent.apps.989119751579-oju5t823q3kr6d18k9knlk5gknpp4n5v</string>
 	<key>API_KEY</key>
 	<string>AIzaSyC_vT9NkKL7xRfxwS8Nzhx9p5G6PUWb-7Y</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.yk-gankeisei.ROPapp</string>
+	<string>com.yk-gankeisei.ROPApp</string>
 	<key>PROJECT_ID</key>
 	<string>ropapp-68871</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:989119751579:ios:10d82da496452e06ebed3e</string>
+	<string>1:989119751579:ios:bf8275b02707066debed3e</string>
 </dict>
 </plist>
