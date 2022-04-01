@@ -72,7 +72,7 @@ struct SendData: View {
                     .frame(minWidth:0, maxWidth:CGFloat.infinity, minHeight: 75)
                     .background(Color.blue)
                     .padding()
-            } else if (self.user.id.isEmpty || self.user.side[user.selected_side].isEmpty || self.user.hospitals[user.selected_hospital].isEmpty){
+            } else if (self.user.id.isEmpty || self.user.hospitals[user.selected_hospital].isEmpty){
                 Button(action: {
                     showingAlert = true //空欄があるとエラー
                 }) {
@@ -140,7 +140,7 @@ struct SendData: View {
     //ResultHolderにテキストデータを格納
     public func SaveToResultHolder(){
         //var imagenum: String = String(user.imageNum)
-        ResultHolder.GetInstance().SetAnswer(q1: stringDate(), q2: user.hashid, q3: user.id, q4: self.user.birthdate, q5: String(self.user.gestWeek), q6:     self.user.gender[user.selected_gender], q7: self.user.hospitals[user.selected_hospital], q8: self.numToString(num: self.user.imageNum), q9: self.user.side[user.selected_side], q10: self.user.area[user.selected_area],q11: self.user.stage[user.selected_stage], q12: self.user.status[user.selected_status], q13: self.user.free_disease)
+        ResultHolder.GetInstance().SetAnswer(q1: stringDate(), q2: user.hashid, q3: user.id, q4: self.user.birthdate, q5: String(self.user.gestWeek[user.selected_gestWeek]), q6:     self.user.gender[user.selected_gender], q7: self.user.hospitals[user.selected_hospital], q8: self.numToString(num: self.user.imageNum), q9: self.user.side[user.selected_side], q10: self.user.area[user.selected_area],q11: self.user.stage[user.selected_stage], q12: self.user.status[user.selected_status], q13: self.user.free_disease)
     }
 
     

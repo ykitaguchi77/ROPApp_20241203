@@ -11,7 +11,7 @@
 		BF9D58F827E92D8D007B409C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D58F727E92D8D007B409C /* ContentView.swift */; };
 		BF9D58FA27E92D8F007B409C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9D58F927E92D8F007B409C /* Assets.xcassets */; };
 		BF9D58FD27E92D8F007B409C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9D58FC27E92D8F007B409C /* Preview Assets.xcassets */; };
-		BF9D590527E92E78007B409C /* ConsHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D590427E92E78007B409C /* ConsHolder.swift */; };
+		BF9D590527E92E78007B409C /* ConstHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D590427E92E78007B409C /* ConstHolder.swift */; };
 		BF9D590727E92EC1007B409C /* MovieCropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D590627E92EC1007B409C /* MovieCropper.swift */; };
 		BF9D590927E92EF8007B409C /* ResultHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D590827E92EF8007B409C /* ResultHolder.swift */; };
 		BF9D590B27E92F60007B409C /* ScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D590A27E92F60007B409C /* ScanButton.swift */; };
@@ -31,7 +31,7 @@
 		BF9D58F727E92D8D007B409C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BF9D58F927E92D8F007B409C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF9D58FC27E92D8F007B409C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BF9D590427E92E78007B409C /* ConsHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsHolder.swift; sourceTree = "<group>"; };
+		BF9D590427E92E78007B409C /* ConstHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstHolder.swift; sourceTree = "<group>"; };
 		BF9D590627E92EC1007B409C /* MovieCropper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCropper.swift; sourceTree = "<group>"; };
 		BF9D590827E92EF8007B409C /* ResultHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultHolder.swift; sourceTree = "<group>"; };
 		BF9D590A27E92F60007B409C /* ScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanButton.swift; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		BF9D590327E92E38007B409C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				BF9D590427E92E78007B409C /* ConsHolder.swift */,
+				BF9D590427E92E78007B409C /* ConstHolder.swift */,
 				BF9D590627E92EC1007B409C /* MovieCropper.swift */,
 				BF9D590827E92EF8007B409C /* ResultHolder.swift */,
 				BF9D590A27E92F60007B409C /* ScanButton.swift */,
@@ -208,7 +208,7 @@
 				BF9D591827E94EA1007B409C /* ClsssificationView.swift in Sources */,
 				BF9D58F627E92D8D007B409C /* ROPApp.swift in Sources */,
 				BF9D590B27E92F60007B409C /* ScanButton.swift in Sources */,
-				BF9D590527E92E78007B409C /* ConsHolder.swift in Sources */,
+				BF9D590527E92E78007B409C /* ConstHolder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +348,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -355,7 +356,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "yk-gankeisei.ROPApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yk-gankeisei.ROPApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -382,6 +383,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -389,7 +391,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "yk-gankeisei.ROPApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yk-gankeisei.ROPApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

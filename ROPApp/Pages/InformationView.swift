@@ -75,14 +75,16 @@ struct Informations: View {
                         
                         
                       
-                        Picker(selection: $user.gestWeek,
+                        Picker(selection: $user.selected_gestWeek,
                                label: Text("在胎週数")) {
                             ForEach(21..<40){ week in
                                 Text("\(week)週")
                             }
                         }
-                       .onChange(of: user.gestWeek) { _ in
+                       .onChange(of: user.selected_gestWeek) { _ in
                            self.user.isSendData = false
+                           print("seleced_gestWeek: \(user.selected_gestWeek)")
+                           print("gestWeek: \(user.gestWeek[user.selected_gestWeek])")
                            }
                     }
 

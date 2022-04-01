@@ -25,8 +25,9 @@ class User : ObservableObject {
     @Published var gender: [String] = ["", "男", "女"]
     @Published var genderCode: [String] = ["O", "M", "F"]
     @Published var birthdate: String = ""
-    @Published var gestWeek: Int = 0
-    @Published var side: [String] = ["", "右", "左"]
+    @Published var selected_gestWeek: Int = 0
+    @Published var gestWeek: [Int] = Array(21...40)
+    @Published var side: [String] = ["NA", "右", "左"]
     @Published var sideCode: [String] = ["N", "R", "L"]
     @Published var hospitals: [String] = ["", "大阪大",]
     @Published var hospitalsAbbreviated: [String] = ["", "OSK"]
