@@ -42,7 +42,8 @@ final class MovieCropper {
         //let squareEdgeCoordinate = videoTrack.naturalSize.height*27/96
         
         //ビデオの切り抜きサイズ設定
-        let croppingRect: CGRect = CGRect(x: (videoTrack.naturalSize.width - squareEdgeLength) / 2, y: 0, width: squareEdgeLength, height: squareEdgeLength)
+        //切り抜きの座標を変えたい時はここを調整
+        let croppingRect: CGRect = CGRect(x: (videoTrack.naturalSize.width - squareEdgeLength) / 50, y: 0, width: squareEdgeLength, height: squareEdgeLength)
         //let croppingRect: CGRect = CGRect(x: squareEdgeCoordinate, y: 0, width: squareEdgeLength, height: squareEdgeLength)
         let transform: CGAffineTransform = videoTrack.preferredTransform.translatedBy(x: -croppingRect.minX, y: -croppingRect.minY)
         

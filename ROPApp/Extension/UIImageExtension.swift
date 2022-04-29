@@ -135,7 +135,8 @@ extension CGImage {
     func cropToSquare() -> CGImage {
         let rectlength = min(self.width, self.height)
         //最後に回転させるので縦横が逆になる
-        let left = (self.width - rectlength) / 2
+        //切り抜き位置の調整はここで行う
+        let left = (self.width - rectlength) * 0
         //let left = 0
         let top = (self.height - rectlength) / 2
         let croppingRect = CGRect(x: left, y: top, width: rectlength, height: rectlength)
