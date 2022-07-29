@@ -89,115 +89,115 @@ struct Informations: View {
                     }
 
             
-                    Section(header: Text("疾患情報"), footer: Text("")){
-                        HStack{
-                            Text("Side")
-                            Picker(selection: $user.selected_side,
-                                       label: Text("右or左")) {
-                                ForEach(0..<user.side.count) {
-                                    Text(self.user.side[$0])
-                                        }
-                                }
-                                .onChange(of: user.selected_side) {_ in
-                                    self.user.isSendData = false
-                                    }
-                                .pickerStyle(SegmentedPickerStyle())
-                        }
-                        
-                        HStack{
-                            Text("Zone")
-                            Picker(selection: $user.selected_zone,
-                                       label: Text("")) {
-                                ForEach(0..<user.zone.count) {
-                                    Text(self.user.zone[$0])
-                                        }
-                                }
-                                .onChange(of: user.selected_zone) {_ in
-                                    self.user.isSendData = false
-                                    }
-                                .pickerStyle(SegmentedPickerStyle())
-                        }
-                        
-
-                        HStack{
-                            Text("Stage")
-                            Picker(selection: $user.selected_stage,
-                                       label: Text("")) {
-                                ForEach(0..<user.stage.count) {
-                                    Text(self.user.stage[$0])
-                                        }
-                                }
-                                .onChange(of: user.selected_stage) {_ in
-                                    self.user.isSendData = false
-                                    }
-                                .pickerStyle(SegmentedPickerStyle())
-                        }
-                        
-                        HStack{
-                            Text("Plus/No-plus")
-                            Picker(selection: $user.selected_plusDisease,
-                                       label: Text("")) {
-                                ForEach(0..<user.plusDisease.count) {
-                                    Text(self.user.plusDisease[$0])
-                                        }
-                                }
-                                .onChange(of: user.selected_plusDisease) {_ in
-                                    self.user.isSendData = false
-                                    }
-                                .pickerStyle(SegmentedPickerStyle())
-                        }
-
-                        HStack{
-                            Text("Category")
-                            Picker(selection: $user.selected_category,
-                                       label: Text("")) {
-                                ForEach(0..<user.category.count) {
-                                    Text(self.user.category[$0])
-                                        }
-                                }
-                                .onChange(of: user.selected_category) {_ in
-                                    self.user.isSendData = false
-                                    }
-                                .pickerStyle(SegmentedPickerStyle())
-                        }
-
-                        HStack{
-                            Text("APROP")
-                            Picker(selection: $user.selected_aprop,
-                                       label: Text("")) {
-                                ForEach(0..<user.aprop.count) {
-                                    Text(self.user.aprop[$0])
-                                        }
-                                }
-                                .onChange(of: user.selected_aprop) {_ in
-                                    self.user.isSendData = false
-                                    }
-                                .pickerStyle(SegmentedPickerStyle())
-                        }
-
-                        
-                        HStack{
-                            Text("自由記載欄")
-                            TextField("", text: $user.free_disease)
-                                .keyboardType(.default)
-                        }.layoutPriority(1)
-                        .onChange(of: user.free_disease) { _ in
-                        self.user.isSendData = false
-                        }
-                    }
-                    
-                    Section(header: Text("分類"), footer: Text("")){
-
-                        Image("area")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: geometry.size.width)
-                        
-                        Image("stage")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: geometry.size.width)
-                    }
+//                    Section(header: Text("疾患情報"), footer: Text("")){
+//                        HStack{
+//                            Text("Side")
+//                            Picker(selection: $user.selected_side,
+//                                       label: Text("右or左")) {
+//                                ForEach(0..<user.side.count) {
+//                                    Text(self.user.side[$0])
+//                                        }
+//                                }
+//                                .onChange(of: user.selected_side) {_ in
+//                                    self.user.isSendData = false
+//                                    }
+//                                .pickerStyle(SegmentedPickerStyle())
+//                        }
+//                        
+//                        HStack{
+//                            Text("Zone")
+//                            Picker(selection: $user.selected_zone,
+//                                       label: Text("")) {
+//                                ForEach(0..<user.zone.count) {
+//                                    Text(self.user.zone[$0])
+//                                        }
+//                                }
+//                                .onChange(of: user.selected_zone) {_ in
+//                                    self.user.isSendData = false
+//                                    }
+//                                .pickerStyle(SegmentedPickerStyle())
+//                        }
+//                        
+//
+//                        HStack{
+//                            Text("Stage")
+//                            Picker(selection: $user.selected_stage,
+//                                       label: Text("")) {
+//                                ForEach(0..<user.stage.count) {
+//                                    Text(self.user.stage[$0])
+//                                        }
+//                                }
+//                                .onChange(of: user.selected_stage) {_ in
+//                                    self.user.isSendData = false
+//                                    }
+//                                .pickerStyle(SegmentedPickerStyle())
+//                        }
+//                        
+//                        HStack{
+//                            Text("Plus/No-plus")
+//                            Picker(selection: $user.selected_plusDisease,
+//                                       label: Text("")) {
+//                                ForEach(0..<user.plusDisease.count) {
+//                                    Text(self.user.plusDisease[$0])
+//                                        }
+//                                }
+//                                .onChange(of: user.selected_plusDisease) {_ in
+//                                    self.user.isSendData = false
+//                                    }
+//                                .pickerStyle(SegmentedPickerStyle())
+//                        }
+//
+//                        HStack{
+//                            Text("Category")
+//                            Picker(selection: $user.selected_category,
+//                                       label: Text("")) {
+//                                ForEach(0..<user.category.count) {
+//                                    Text(self.user.category[$0])
+//                                        }
+//                                }
+//                                .onChange(of: user.selected_category) {_ in
+//                                    self.user.isSendData = false
+//                                    }
+//                                .pickerStyle(SegmentedPickerStyle())
+//                        }
+//
+//                        HStack{
+//                            Text("APROP")
+//                            Picker(selection: $user.selected_aprop,
+//                                       label: Text("")) {
+//                                ForEach(0..<user.aprop.count) {
+//                                    Text(self.user.aprop[$0])
+//                                        }
+//                                }
+//                                .onChange(of: user.selected_aprop) {_ in
+//                                    self.user.isSendData = false
+//                                    }
+//                                .pickerStyle(SegmentedPickerStyle())
+//                        }
+//
+//                        
+//                        HStack{
+//                            Text("自由記載欄")
+//                            TextField("", text: $user.free_disease)
+//                                .keyboardType(.default)
+//                        }.layoutPriority(1)
+//                        .onChange(of: user.free_disease) { _ in
+//                        self.user.isSendData = false
+//                        }
+//                    }
+//                    
+//                    Section(header: Text("分類"), footer: Text("")){
+//
+//                        Image("area")
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(width: geometry.size.width)
+//                        
+//                        Image("stage")
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(width: geometry.size.width)
+//                    }
                 }.navigationTitle("患者情報入力")
                 .onAppear(){
                 }

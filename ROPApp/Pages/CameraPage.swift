@@ -25,7 +25,7 @@ struct CameraPage: View {
                                 destination: Imagepicker(show: $isImagePicker, image: $imageData, sourceType: self.user.sourceType, equipmentVideo: self.user.equipmentVideo),
                                 isActive:$isImagePicker,
                                 label: {
-                                    Text("TakePhoto")
+                                    Text("")
                                 })
                             VStack{
                                 //写真を撮ったらSendDataへ
