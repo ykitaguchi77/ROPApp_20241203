@@ -10,16 +10,18 @@ import SwiftUI
 import CoreData
 
 //変数を定義
-class User : ObservableObject {
+class User : ObservableObject, Identifiable {
     @Published var date: Date = Date()
     @Published var id: String = ""
     @Published var hashid: String = ""
     @Published var selected_gender: Int = 0
     @Published var selected_side: Int = 0
     @Published var selected_hospital: Int = 0
-    @Published var selected_area: Int = 0
+    @Published var selected_zone: Int = 0
     @Published var selected_stage: Int = 0
-    @Published var selected_status: Int = 0
+    @Published var selected_plusDisease: Int = 0
+    @Published var selected_category: Int = 0
+    @Published var selected_aprop: Int = 0
     @Published var free_disease: String = ""
     @Published var ssmixpath: String = "" //JOIR転送用フォルダ
     @Published var gender: [String] = ["", "男", "女"]
@@ -32,9 +34,11 @@ class User : ObservableObject {
     @Published var hospitals: [String] = ["", "大阪大",]
     @Published var hospitalsAbbreviated: [String] = ["", "OSK"]
     @Published var hospitalcode: [String] = ["", "5110051"]
-    @Published var area: [String] = ["NA", "0", "I", "II", "PoseriorII", "III"]
-    @Published var stage: [String] = ["NA", "0", "I", "II", "III", "IVa", "IVb", "V"]
-    @Published var status: [String] = ["NA", "Plus", "Active", "Regressed", "Treated"]
+    @Published var zone: [String] = ["NA", "0", "I", "II", "III"]
+    @Published var stage: [String] = ["NA", "0", "1", "2", "3", "4", "5"]
+    @Published var plusDisease: [String] = ["NA", "None", "Pre-Plus", "Plus"]
+    @Published var category: [String] = ["NA", "None", "mild", "Type-2", "NeedTreat"]
+    @Published var aprop: [String] = ["NA", "No", "Yes"]
     @Published var imageNum: Int = 0 //写真の枚数（何枚目の撮影か）
     @Published var isNewData: Bool = false
     @Published var isSendData: Bool = false
@@ -200,12 +204,15 @@ struct ContentView: View {
                     self.user.selected_gender = 0
                     self.user.selected_side = 0
                     self.user.selected_hospital = 0
-                    self.user.selected_area = 0
+                    self.user.selected_zone = 0
                     self.user.selected_stage = 0
-                    self.user.selected_status = 0
+                    self.user.selected_plusDisease = 0
+                    self.user.selected_category = 0
+                    self.user.selected_aprop = 0
                     self.user.free_disease = ""
                     self.user.isSendData = false
                     //self.user.ssmixpath = ""
+                    
                 }),
                       secondaryButton:.destructive(Text("いいえ"), action:{}))
                 }

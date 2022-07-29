@@ -74,9 +74,9 @@ class ResultHolder{
         return imageJsons
     }
     
-    private (set) public var Answers: [String:String] = ["q1":"", "q2":"", "q3":"", "q4":"", "q5": "", "q6": "", "q7": "", "q8": "", "q9": "" , "q10": "" , "q11": "", "q12": "", "q13": ""]
+    private (set) public var Answers: [String:String] = ["q1":"", "q2":"", "q3":"", "q4":"", "q5": "", "q6": "", "q7": "", "q8": "", "q9": "" , "q10": "" , "q11": "", "q12": "", "q13": "", "q14": "", "q15": ""]
 
-    public func SetAnswer(q1:String, q2:String, q3:String, q4:String, q5:String, q6:String, q7:String, q8:String, q9:String, q10:String, q11:String, q12:String, q13:String){
+    public func SetAnswer(q1:String, q2:String, q3:String, q4:String, q5:String, q6:String, q7:String, q8:String, q9:String, q10:String, q11:String, q12:String, q13:String, q14:String, q15:String){
         Answers["q1"] = q1 //date
         Answers["q2"] = q2 //hashID
         Answers["q3"] = q3 //ID
@@ -86,12 +86,14 @@ class ResultHolder{
         Answers["q7"] = q7 //hospital
         Answers["q8"] = q8 //imgNum
         Answers["q9"] = q9 //side
-        Answers["q10"] = q10 //area
+        Answers["q10"] = q10 //zone
         Answers["q11"] = q11 //stage
-        Answers["q12"] = q12 //status
-        Answers["q13"] = q13 //free
+        Answers["q12"] = q12 //plusDisease
+        Answers["q13"] = q13 //category
+        Answers["q14"] = q14 //aprop
+        Answers["q15"] = q15 //free
     }
-
+    
     public func GetAnswerJson() -> String{
         let data = QuestionAnswerData()
         data.pq1 = Answers["q1"] ?? ""
@@ -107,6 +109,8 @@ class ResultHolder{
         data.pq11 = Answers["q11"] ?? ""
         data.pq12 = Answers["q12"] ?? ""
         data.pq13 = Answers["q13"] ?? ""
+        data.pq14 = Answers["q14"] ?? ""
+        data.pq15 = Answers["q15"] ?? ""
         let jsonEncoder = JSONEncoder()
         jsonEncoder.outputFormatting = .sortedKeys
         let jsonData = (try? jsonEncoder.encode(data)) ?? Data()
@@ -133,4 +137,6 @@ class QuestionAnswerData: Codable{
     var pq11 = ""
     var pq12 = ""
     var pq13 = ""
+    var pq14 = ""
+    var pq15 = ""
 }

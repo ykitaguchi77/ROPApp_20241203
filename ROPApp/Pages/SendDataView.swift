@@ -48,10 +48,11 @@ struct SendData: View {
                             }
                             Text("ID: \(self.user.id)")
                             Text("Side: \(self.user.side[user.selected_side])")
-                            Text("Area: \(self.user.area[user.selected_area])")
+                            Text("Zone: \(self.user.zone[user.selected_zone])")
                             Text("Stage: \(self.user.stage[user.selected_stage])")
-                            Text("Status: \(self.user.status[user.selected_status])")
-                            Text("自由記載: \(self.user.free_disease)")
+                            Text("PlusDisease: \(self.user.plusDisease[user.selected_plusDisease])")
+                            Text("Status: \(self.user.category[user.selected_category])")
+                            Text("PlusDisease: \(self.user.aprop[user.selected_aprop])")
                         }
                     }
                 }
@@ -140,9 +141,10 @@ struct SendData: View {
     //ResultHolderにテキストデータを格納
     public func SaveToResultHolder(){
         //var imagenum: String = String(user.imageNum)
-        ResultHolder.GetInstance().SetAnswer(q1: stringDate(), q2: user.hashid, q3: user.id, q4: self.user.birthdate, q5: String(self.user.gestWeek[user.selected_gestWeek]), q6:     self.user.gender[user.selected_gender], q7: self.user.hospitals[user.selected_hospital], q8: self.numToString(num: self.user.imageNum), q9: self.user.side[user.selected_side], q10: self.user.area[user.selected_area],q11: self.user.stage[user.selected_stage], q12: self.user.status[user.selected_status], q13: self.user.free_disease)
+        ResultHolder.GetInstance().SetAnswer(q1: stringDate(), q2: user.hashid, q3: user.id, q4: self.user.birthdate, q5: String(self.user.gestWeek[user.selected_gestWeek]), q6:     self.user.gender[user.selected_gender], q7: self.user.hospitals[user.selected_hospital], q8: self.numToString(num: self.user.imageNum), q9: self.user.side[user.selected_side], q10: self.user.zone[user.selected_zone],q11: self.user.stage[user.selected_stage], q12: self.user.plusDisease[user.selected_plusDisease], q13: self.user.category[user.selected_category],q14: self.user.aprop[user.selected_aprop],q15: self.user.free_disease)
     }
 
+    
     
     public func stringDate()->String{
         let df = DateFormatter()

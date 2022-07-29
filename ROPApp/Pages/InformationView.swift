@@ -105,19 +105,20 @@ struct Informations: View {
                         }
                         
                         HStack{
-                            Text("Area")
-                            Picker(selection: $user.selected_area,
+                            Text("Zone")
+                            Picker(selection: $user.selected_zone,
                                        label: Text("")) {
-                                ForEach(0..<user.area.count) {
-                                    Text(self.user.area[$0])
+                                ForEach(0..<user.zone.count) {
+                                    Text(self.user.zone[$0])
                                         }
                                 }
-                                .onChange(of: user.selected_area) {_ in
+                                .onChange(of: user.selected_zone) {_ in
                                     self.user.isSendData = false
                                     }
                                 .pickerStyle(SegmentedPickerStyle())
                         }
                         
+
                         HStack{
                             Text("Stage")
                             Picker(selection: $user.selected_stage,
@@ -133,18 +134,47 @@ struct Informations: View {
                         }
                         
                         HStack{
-                            Text("Status")
-                            Picker(selection: $user.selected_status,
+                            Text("Plus/No-plus")
+                            Picker(selection: $user.selected_plusDisease,
                                        label: Text("")) {
-                                ForEach(0..<user.status.count) {
-                                    Text(self.user.status[$0])
+                                ForEach(0..<user.plusDisease.count) {
+                                    Text(self.user.plusDisease[$0])
                                         }
                                 }
-                                .onChange(of: user.selected_status) {_ in
+                                .onChange(of: user.selected_plusDisease) {_ in
                                     self.user.isSendData = false
                                     }
                                 .pickerStyle(SegmentedPickerStyle())
                         }
+
+                        HStack{
+                            Text("Category")
+                            Picker(selection: $user.selected_category,
+                                       label: Text("")) {
+                                ForEach(0..<user.category.count) {
+                                    Text(self.user.category[$0])
+                                        }
+                                }
+                                .onChange(of: user.selected_category) {_ in
+                                    self.user.isSendData = false
+                                    }
+                                .pickerStyle(SegmentedPickerStyle())
+                        }
+
+                        HStack{
+                            Text("APROP")
+                            Picker(selection: $user.selected_aprop,
+                                       label: Text("")) {
+                                ForEach(0..<user.aprop.count) {
+                                    Text(self.user.aprop[$0])
+                                        }
+                                }
+                                .onChange(of: user.selected_aprop) {_ in
+                                    self.user.isSendData = false
+                                    }
+                                .pickerStyle(SegmentedPickerStyle())
+                        }
+
                         
                         HStack{
                             Text("自由記載欄")
