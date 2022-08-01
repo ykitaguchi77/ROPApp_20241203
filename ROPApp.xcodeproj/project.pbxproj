@@ -20,7 +20,7 @@
 		BF9D591227E93080007B409C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D591127E93080007B409C /* ImagePicker.swift */; };
 		BF9D591427E93090007B409C /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D591327E93090007B409C /* InformationView.swift */; };
 		BF9D591627E930B0007B409C /* SendDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D591527E930B0007B409C /* SendDataView.swift */; };
-		BF9D591827E94EA1007B409C /* ClsssificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D591727E94EA1007B409C /* ClsssificationView.swift */; };
+		BF9D591827E94EA1007B409C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D591727E94EA1007B409C /* SearchView.swift */; };
 		BF9D591E27EA2593007B409C /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = BF9D591D27EA2593007B409C /* FirebaseAppDistribution-Beta */; };
 		BF9D592027EA2B68007B409C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF9D591F27EA2B68007B409C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -40,7 +40,7 @@
 		BF9D591127E93080007B409C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		BF9D591327E93090007B409C /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		BF9D591527E930B0007B409C /* SendDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataView.swift; sourceTree = "<group>"; };
-		BF9D591727E94EA1007B409C /* ClsssificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClsssificationView.swift; sourceTree = "<group>"; };
+		BF9D591727E94EA1007B409C /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		BF9D591927E988F7007B409C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BF9D591F27EA2B68007B409C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,7 +114,7 @@
 				BF9D590F27E9306F007B409C /* CameraPage.swift */,
 				BF9D591127E93080007B409C /* ImagePicker.swift */,
 				BF9D591327E93090007B409C /* InformationView.swift */,
-				BF9D591727E94EA1007B409C /* ClsssificationView.swift */,
+				BF9D591727E94EA1007B409C /* SearchView.swift */,
 				BF9D591527E930B0007B409C /* SendDataView.swift */,
 			);
 			path = Pages;
@@ -205,7 +205,7 @@
 				BF9D591427E93090007B409C /* InformationView.swift in Sources */,
 				BF9D591627E930B0007B409C /* SendDataView.swift in Sources */,
 				BF9D590927E92EF8007B409C /* ResultHolder.swift in Sources */,
-				BF9D591827E94EA1007B409C /* ClsssificationView.swift in Sources */,
+				BF9D591827E94EA1007B409C /* SearchView.swift in Sources */,
 				BF9D58F627E92D8D007B409C /* ROPApp.swift in Sources */,
 				BF9D590B27E92F60007B409C /* ScanButton.swift in Sources */,
 				BF9D590527E92E78007B409C /* ConstHolder.swift in Sources */,

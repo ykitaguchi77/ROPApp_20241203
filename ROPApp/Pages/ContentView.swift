@@ -27,11 +27,10 @@ class User : ObservableObject, Identifiable {
     @Published var gender: [String] = ["", "男", "女"]
     @Published var genderCode: [String] = ["O", "M", "F"]
     @Published var birthdate: String = ""
-    @Published var selected_gestWeek: Int = 0
-    @Published var gestWeek: [Int] = Array(21...40)
+    @Published var gestWeek_idx: Int = -1 //22歳〜で表示しているため実際の年齢は(idx+21)
     @Published var side: [String] = ["NA", "右", "左"]
     @Published var sideCode: [String] = ["N", "R", "L"]
-    @Published var hospitals: [String] = ["", "大阪大",]
+    @Published var hospitals: [String] = ["", "大阪大", "市立堺病院", "富山大学"]
     @Published var hospitalsAbbreviated: [String] = ["", "OSK"]
     @Published var hospitalcode: [String] = ["", "5110051"]
     @Published var zone: [String] = ["NA", "0", "I", "II", "III"]
@@ -51,9 +50,11 @@ struct ContentView: View {
     @ObservedObject var user = User()
     @State private var goTakePhoto: Bool = false  //撮影ボタン
     @State private var isPatientInfo: Bool = false  //患者情報入力ボタン
+    @State private var goInterview: Bool = false  //問診ボタン
     @State private var goSendData: Bool = false  //送信ボタン
-    @State private var uploadData: Bool = false  //送信ボタン
-    @State private var newPatient: Bool = false  //送信ボタン
+    @State private var uploadData: Bool = false  //アップロードボタン
+    @State private var newPatient: Bool = false  //新規患者ボタン
+    @State private var goSearch: Bool = false  //検索ボタン
     
     
     var body: some View {
@@ -202,6 +203,7 @@ struct ContentView: View {
                     self.user.birthdate = ""
                     self.user.imageNum = 0
                     self.user.selected_gender = 0
+                    self.user.gestWeek_idx = -1
                     self.user.selected_side = 0
                     self.user.selected_hospital = 0
                     self.user.selected_zone = 0
@@ -220,6 +222,23 @@ struct ContentView: View {
                 .background(Color.black)
                 .padding()
             }
+            
+            Button(action: {self.goSearch = true /*またはself.show.toggle() */}) {
+                HStack{
+                    Image(systemName: "applepencil")
+                    Text("修正")
+                }
+                    .foregroundColor(Color.white)
+                    .font(Font.largeTitle)
+            }
+                .frame(minWidth:0, maxWidth:160, minHeight: 75)
+                .background(Color.black)
+                .padding()
+            .sheet(isPresented: self.$goSearch) {
+                Search(user: user)
+            }
+            
+            
         }
     }
 }

@@ -259,7 +259,8 @@ struct SendData: View {
     //ResultHolderにテキストデータを格納
     public func SaveToResultHolder(){
         //var imagenum: String = String(user.imageNum)
-        ResultHolder.GetInstance().SetAnswer(q1: stringDate(), q2: user.hashid, q3: user.id, q4: self.user.birthdate, q5: String(self.user.gestWeek[user.selected_gestWeek]), q6:     self.user.gender[user.selected_gender], q7: self.user.hospitals[user.selected_hospital], q8: self.numToString(num: self.user.imageNum), q9: self.user.side[user.selected_side], q10: self.user.zone[user.selected_zone],q11: self.user.stage[user.selected_stage], q12: self.user.plusDisease[user.selected_plusDisease], q13: self.user.category[user.selected_category],q14: self.user.aprop[user.selected_aprop],q15: self.user.free_disease)
+        ResultHolder.GetInstance().SetAnswer(q1: stringDate(), q2: user.hashid, q3: user.id, q4: self.user.birthdate, q5: self.numToString(num:user.gestWeek_idx+21), q6:     self.user.gender[user.selected_gender], q7: self.user.hospitals[user.selected_hospital], q8: self.numToString(num: self.user.imageNum), q9: self.user.side[user.selected_side], q10: self.user.zone[user.selected_zone],q11: self.user.stage[user.selected_stage], q12: self.user.plusDisease[user.selected_plusDisease], q13: self.user.category[user.selected_category],q14: self.user.aprop[user.selected_aprop],q15: self.user.free_disease)
+            //gestWeek_idx+21 --> 実際の在胎週数
     }
 
     
