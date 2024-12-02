@@ -6,6 +6,13 @@
 //
 //写真Coredata参考サイト：https://tomato-develop.com/swiftui-camera-photo-library-core-data/
 //
+
+//課題
+//画像を差し替えた時のみImageNumが増えるようにしたい
+//
+
+
+
 import SwiftUI
 import CoreData
 

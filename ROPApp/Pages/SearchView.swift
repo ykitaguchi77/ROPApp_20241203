@@ -61,7 +61,7 @@ struct Search: View {
                             VStack{
                                 Text("date: \(items[idx].pq1)").frame(maxWidth: .infinity,alignment: .leading)
                                 Text("id: \(items[idx].pq3), 在胎\(items[idx].pq5)週, \(items[idx].pq6)性, \(items[idx].pq9)眼").frame(maxWidth: .infinity,alignment: .leading)
-                                Text("zone: \(items[idx].pq10), stage: \(items[idx].pq11), category: \(items[idx].pq13)").frame(maxWidth: .infinity,alignment: .leading)
+                                Text("zone: \(items[idx].pq10), stage: \(items[idx].pq11), category: \(items[idx].pq13), imgNum: \(items[idx].pq8)").frame(maxWidth: .infinity,alignment: .leading)
                             }
                                 
                             Spacer()

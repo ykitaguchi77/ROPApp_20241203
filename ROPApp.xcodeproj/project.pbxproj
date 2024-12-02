@@ -16,13 +16,15 @@
 		BF9D590927E92EF8007B409C /* ResultHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D590827E92EF8007B409C /* ResultHolder.swift */; };
 		BF9D590B27E92F60007B409C /* ScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D590A27E92F60007B409C /* ScanButton.swift */; };
 		BF9D590D27E92F88007B409C /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D590C27E92F88007B409C /* UIImageExtension.swift */; };
-		BF9D591027E9306F007B409C /* CameraPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D590F27E9306F007B409C /* CameraPage.swift */; };
+		BF9D591027E9306F007B409C /* CameraPage_imagepicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D590F27E9306F007B409C /* CameraPage_imagepicker.swift */; };
 		BF9D591227E93080007B409C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D591127E93080007B409C /* ImagePicker.swift */; };
 		BF9D591427E93090007B409C /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D591327E93090007B409C /* InformationView.swift */; };
 		BF9D591627E930B0007B409C /* SendDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D591527E930B0007B409C /* SendDataView.swift */; };
 		BF9D591827E94EA1007B409C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D591727E94EA1007B409C /* SearchView.swift */; };
 		BF9D591E27EA2593007B409C /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = BF9D591D27EA2593007B409C /* FirebaseAppDistribution-Beta */; };
 		BF9D592027EA2B68007B409C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF9D591F27EA2B68007B409C /* GoogleService-Info.plist */; };
+		BFEC41D92CFE15FD0095F9A0 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEC41D82CFE15FD0095F9A0 /* CustomCameraView.swift */; };
+		BFEC41DB2CFE16380095F9A0 /* CameraPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEC41DA2CFE16380095F9A0 /* CameraPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,13 +38,15 @@
 		BF9D590827E92EF8007B409C /* ResultHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultHolder.swift; sourceTree = "<group>"; };
 		BF9D590A27E92F60007B409C /* ScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanButton.swift; sourceTree = "<group>"; };
 		BF9D590C27E92F88007B409C /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		BF9D590F27E9306F007B409C /* CameraPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPage.swift; sourceTree = "<group>"; };
+		BF9D590F27E9306F007B409C /* CameraPage_imagepicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPage_imagepicker.swift; sourceTree = "<group>"; };
 		BF9D591127E93080007B409C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		BF9D591327E93090007B409C /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		BF9D591527E930B0007B409C /* SendDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataView.swift; sourceTree = "<group>"; };
 		BF9D591727E94EA1007B409C /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		BF9D591927E988F7007B409C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BF9D591F27EA2B68007B409C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BFEC41D82CFE15FD0095F9A0 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
+		BFEC41DA2CFE16380095F9A0 /* CameraPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,14 +114,24 @@
 			isa = PBXGroup;
 			children = (
 				BF9D58F527E92D8D007B409C /* ROPApp.swift */,
+				BFEC41DC2CFE1B7B0095F9A0 /* ImagePicker_depricated */,
+				BFEC41D82CFE15FD0095F9A0 /* CustomCameraView.swift */,
 				BF9D58F727E92D8D007B409C /* ContentView.swift */,
-				BF9D590F27E9306F007B409C /* CameraPage.swift */,
-				BF9D591127E93080007B409C /* ImagePicker.swift */,
 				BF9D591327E93090007B409C /* InformationView.swift */,
 				BF9D591727E94EA1007B409C /* SearchView.swift */,
 				BF9D591527E930B0007B409C /* SendDataView.swift */,
+				BFEC41DA2CFE16380095F9A0 /* CameraPage.swift */,
 			);
 			path = Pages;
+			sourceTree = "<group>";
+		};
+		BFEC41DC2CFE1B7B0095F9A0 /* ImagePicker_depricated */ = {
+			isa = PBXGroup;
+			children = (
+				BF9D591127E93080007B409C /* ImagePicker.swift */,
+				BF9D590F27E9306F007B409C /* CameraPage_imagepicker.swift */,
+			);
+			path = ImagePicker_depricated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF9D590727E92EC1007B409C /* MovieCropper.swift in Sources */,
-				BF9D591027E9306F007B409C /* CameraPage.swift in Sources */,
+				BF9D591027E9306F007B409C /* CameraPage_imagepicker.swift in Sources */,
 				BF9D58F827E92D8D007B409C /* ContentView.swift in Sources */,
 				BF9D591227E93080007B409C /* ImagePicker.swift in Sources */,
 				BF9D590D27E92F88007B409C /* UIImageExtension.swift in Sources */,
@@ -207,6 +221,8 @@
 				BF9D590927E92EF8007B409C /* ResultHolder.swift in Sources */,
 				BF9D591827E94EA1007B409C /* SearchView.swift in Sources */,
 				BF9D58F627E92D8D007B409C /* ROPApp.swift in Sources */,
+				BFEC41D92CFE15FD0095F9A0 /* CustomCameraView.swift in Sources */,
+				BFEC41DB2CFE16380095F9A0 /* CameraPage.swift in Sources */,
 				BF9D590B27E92F60007B409C /* ScanButton.swift in Sources */,
 				BF9D590527E92E78007B409C /* ConstHolder.swift in Sources */,
 			);

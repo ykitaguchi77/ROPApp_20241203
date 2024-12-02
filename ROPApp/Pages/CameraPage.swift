@@ -1,48 +1,44 @@
 //
-//  ContentView.swift
-//  Shared
+//  CameraPage.swift
+//  ROPApp
 //
-//  Created by Kuniaki Ohara on 2021/01/06.
+//  Created by Yoshiyuki Kitaguchi on 2024/12/03.
 //
+
 import SwiftUI
 
 struct CameraPage: View {
-    
     @ObservedObject var user: User
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var imageData : Data = .init(capacity:0)
-    @State var rawImage : Data = .init(capacity:0)
-
-    @State var isActionSheet = true
-    @State var isImagePicker = true
-
+    @State var isCustomCameraActive: Bool = false
     
     var body: some View {
-            NavigationView{
-                VStack(spacing:0){
-                        ZStack{
-                            NavigationLink(
-                                destination: Imagepicker(show: $isImagePicker, image: $imageData, sourceType: self.user.sourceType, equipmentVideo: self.user.equipmentVideo),
-                                isActive:$isImagePicker,
-                                label: {
-                                    Text("")
-                                })
-                            VStack{
-                                //写真を撮ったらSendDataへ
-                                //if imageData.count != 0{
-                                if isImagePicker == false{
-                                    SendData(user:user)
-                            }
-                        }
+        NavigationView {
+            VStack {
+                Text("カメラページ")
+                    .font(.title)
+                    .padding()
+                
+                Button(action: {
+                    isCustomCameraActive = true
+                }) {
+                    Text("カスタムカメラを開く")
+                        .font(.headline)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
                 }
-                .navigationBarTitle("", displayMode: .inline)
-
+                .padding()
+                
+                NavigationLink(
+                    destination: CustomCameraView(),
+                    isActive: $isCustomCameraActive,
+                    label: {
+                        EmptyView()
+                    }
+                )
             }
-        .ignoresSafeArea(.all, edges: .top)
-        .background(Color.primary.opacity(0.06).ignoresSafeArea(.all, edges: .all))
+            .navigationBarTitle("カメラページ", displayMode: .inline)
+        }
     }
-    
-    
-}
-
 }
